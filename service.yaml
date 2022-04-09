@@ -1,12 +1,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: example-app
+  name: prometheus-example-app
   labels:
-    app: example-app
+    app.kubernetes.io/name: prometheus-example-app
 spec:
   selector:
-    app: example-app
+    app.kubernetes.io/name: prometheus-example-app
   ports:
   - name: web
     port: 8080
